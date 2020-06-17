@@ -3,10 +3,6 @@ episodas = function(data){
     var curdiv = null; // letじゃ駄目
     var buttons = []
     
-    //if(typeof(require) == 'undefined'){
-	crypt = exports;
-    //}
-
     let browserWidth = () => {
 	if(window.innerWidth){ return window.innerWidth; }  
 	else if(document.body){ return document.body.clientWidth; }  
@@ -42,11 +38,8 @@ episodas = function(data){
     };
 
     function finish(){ // DASパタン入力終了
-	//var newpass = exports.crypt(data.seed, secretstr());
-
         const { ipcRenderer } = window.native; // preload.js 経由で渡されるデータ
 
-        //ipcRenderer.send('secret', newpass)
         ipcRenderer.send('secret', secretstr())
     }
     
