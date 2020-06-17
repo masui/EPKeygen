@@ -3,7 +3,9 @@
    "version": "1.0.0",
    "description": "Create id_rsa with EpisoPass",
    "main": "main.js",
-   "dependencies": {},
+   "dependencies": {
+      "md5": "^2.2.1"
+   },
    "devDependencies": {
       "app": "^0.1.0",
       "electron": "^8.2.5",

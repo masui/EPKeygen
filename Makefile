@@ -4,7 +4,7 @@ build: compile
 	npm run build
 
 compile:
-	coffee -c -b www/javascripts/crypt.coffee
+	coffee -c -b crypt.coffee
 
 cleanbuild: clean install build
 

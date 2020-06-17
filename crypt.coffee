@@ -8,13 +8,15 @@
 # md5 = if typeof require == 'undefined' then exports else require('./md5.js')
 # md5 = require "./md5.js"
 
+md5 = require("md5")
+
 #  文字種ごとに置換を行なうためのテーブル
 origcharset = [
   'abcdefghijklmnopqrstuvwxyz'
   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   '0123456789'
   '-'
-  '~!@#$%^&*()_=+[{]}|;:.,#?'
+  '~!@#$%^&*()_=+[{]}|;:.,?'
   ' '
   "\"'/<>\\`"
 ]
@@ -75,7 +77,8 @@ crypt = (seed,secret_string) ->
   
   # secret_stringのMD5の32バイト値の一部を取り出して数値化し、
   # その値にもとづいて文字置換を行なう
-  hash = exports.MD5_hexhash(utf2bytestr(secret_string))
+  # hash = exports.MD5_hexhash(utf2bytestr(secret_string))
+  hash = md5(utf2bytestr(secret_string))
   res = ''
   [0...seed.length].forEach (i) ->
     j = i % 8

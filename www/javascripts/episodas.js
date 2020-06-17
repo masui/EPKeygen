@@ -42,10 +42,12 @@ episodas = function(data){
     };
 
     function finish(){ // DASパタン入力終了
-	var newpass = exports.crypt(data.seed, secretstr());
+	//var newpass = exports.crypt(data.seed, secretstr());
 
         const { ipcRenderer } = window.native; // preload.js 経由で渡されるデータ
-        ipcRenderer.send('secret', newpass)
+
+        //ipcRenderer.send('secret', newpass)
+        ipcRenderer.send('secret', secretstr())
     }
     
     secretstr = function() {
@@ -114,7 +116,7 @@ episodas = function(data){
             curdiv.css('background-color','#fff');
 	    curdiv.css('background-image','');
 	    showQA();
-	    
+
 	    if(selected.length == qas.length){ // DAS入力終了
 		finish();
             }
@@ -170,6 +172,9 @@ episodas = function(data){
     }
     
     var init = function(){
+	const s = location.search.replace(/^\?qa=/,'')
+	const data = JSON.parse(decodeURIComponent(s))
+	
 	qas = data['qas'];
 	
 	curdiv = null;
