@@ -1,8 +1,11 @@
 <h1>EPKeygen - 秘密鍵をEpisoPassで作る</h1>
 
 <ul>
-  <li>EpisoPassでid_rsaを生成する</li>
-  <li>EpisoPassのSeedを変換するとid_rsaになるようにする</li>
+  <li><a href="https://EpisoPass.com/">EpisoPass</a>で<code>id_rsa</code>を管理する</li>
+  <li><code>id_rsa</code>が存在する状況でEPKeygenを動かすと<code>id_rsa_episopass</code>ができる</li>
+  <li><code>id_rsa</code>を消してEPKeygenを動かすと<code>id_rsa</code>が復活する</li>
+  <li>ふだんは<code>id_rsa_episopass</code>だけパソコンに置いておけばいい</li>
+  <li>必要なときだけ<code>id_rsa</code>を作ればいい</li>
 </ul>
 
 <h2>Issues</h3>
