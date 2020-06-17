@@ -26,3 +26,4 @@ run:
 # 	scp build/GyazoUploader-1.0.0.dmg pitecan.com:/www/www.pitecan.com/
 # upload-chromeOS:
 # 	scp build/GyazoUploader-1.0.0.AppImage  pitecan.com:/www/www.pitecan.com/GyazoUploader
+
