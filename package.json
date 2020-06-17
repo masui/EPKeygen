@@ -1,0 +1,32 @@
+{
+   "name": "EPGen",
+   "version": "1.0.0",
+   "description": "Create id_rsa with EpisoPass",
+   "main": "main.js",
+   "dependencies": {},
+   "devDependencies": {
+      "app": "^0.1.0",
+      "electron": "^8.2.5",
+      "electron-app": "^1.0.0",
+      "electron-builder": "^22.6.0",
+      "electron-packager": "^14.2.1",
+      "electron-prebuilt": "^1.4.13",
+      "require": "^2.4.20"
+   },
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node_modules/.bin/electron .",
+      "build": "electron-builder"
+   },
+   "build": {
+      "appId": "com.pitecan.epgen",
+      "mac": {
+         "target": "dmg"
+      },
+      "directories": {
+         "output": "build"
+      }
+   },
+   "author": "Toshiyuki Masui",
+   "license": "ISC"
+}

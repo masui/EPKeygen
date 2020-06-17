@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>EpisoPassKeyGen</title>
+    <script>
+var data = {
+  "name": "EpisoPass_masui@pitecan.com",
+  "seed": "EpisoPass_123456",
+  "qas": [
+      {
+	  "question": "コケて小指をケガしたのは?",
+	  "answers": [
+              "北海道",
+	      "宮城",
+	      "福島",
+	      "新潟",
+              "東京",
+	      "埼玉",
+              "神奈川",
+              "長野",
+              "奈良",
+	      "大阪"
+	  ]
+      },
+      {
+	  "question": "財布を拾ったのは?",
+	  "answers": [
+	      "横浜",
+	      "戸塚",
+              "大船",
+              "湘南台",
+	      "中央林間",
+              "鎌倉",
+              "藤沢",
+	      "平塚",
+              "逗子",
+	      "葉山"
+	  ]
+      }
+  ]
+}
+      
+      var exports = {}
+    </script>
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/md5.js"></script>
+    <script src="javascripts/crypt.js"></script>
+    <script src="javascripts/episodas.js"></script>
+    <script src="javascripts/lib.js"></script> <!-- 要るのか? -->
+    <script>
+      //document.ready = function() {
+      $(function() {
+	  /*
+        const { ipcRenderer } = window.native; // preload.js 経由で渡されるデータ
+        $('#generate').on('click', ()=> {
+            ipcRenderer.send('md5', '123456')
+        })
+	  */
+
+	  //alert(exports.MD5_hexhash("abc"))
+	  //alert(exports.crypt('abc','def'))
+
+          episodas = exports.episodas;
+	  console.log(episodas)
+          episodas(data);
+      })
+    </script>
+    <style type="text/css">
+      body, input, textarea {
+	  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+      }
+    </style>
+  </head>
+  <body background="exclusive_paper.gif">
+    <span id="generate">KeyGen</span>
+    
+    <div id="das">
+    </div>
+
+
+  </body>
+</html>
