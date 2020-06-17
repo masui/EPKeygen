@@ -2,6 +2,7 @@
 
 build: compile
 	npm run build
+	cp -r build/mac/EPKeygen.app /Applications
 
 compile:
 	coffee -c -b crypt.coffee

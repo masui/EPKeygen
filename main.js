@@ -50,9 +50,14 @@ ipcMain.on('secret', (event, secret) => {
 
     if(id_rsa_exist && !id_rsa_episopass_exist){
 	convert(id_rsa,id_rsa_episopass,secret)
+	console.log("id_rsa_episopassが生成されました")
     }
     else if(!id_rsa_exist && id_rsa_episopass_exist){
 	convert(id_rsa_episopass,id_rsa,secret)
+	console.log("id_rsaが生成されました")
+    }
+    else {
+	console.log("ファイル変更はありません")
     }
 
     app.quit()
