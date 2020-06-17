@@ -3,50 +3,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>EpisoPassKeyGen</title>
     <script>
-var data = {
-  "name": "EpisoPass_masui@pitecan.com",
-  "seed": "EpisoPass_123456",
-  "qas": [
-      {
-	  "question": "コケて小指をケガしたのは?",
-	  "answers": [
-              "北海道",
-	      "宮城",
-	      "福島",
-	      "新潟",
-              "東京",
-	      "埼玉",
-              "神奈川",
-              "長野",
-              "奈良",
-	      "大阪"
-	  ]
-      },
-      {
-	  "question": "財布を拾ったのは?",
-	  "answers": [
-	      "横浜",
-	      "戸塚",
-              "大船",
-              "湘南台",
-	      "中央林間",
-              "鎌倉",
-              "藤沢",
-	      "平塚",
-              "逗子",
-	      "葉山"
-	  ]
-      }
-  ]
-}
-      
       var exports = {}
     </script>
     <script src="javascripts/jquery.js"></script>
     <script src="javascripts/md5.js"></script>
     <script src="javascripts/crypt.js"></script>
     <script src="javascripts/episodas.js"></script>
-    <script src="javascripts/lib.js"></script> <!-- 要るのか? -->
+    <script src="javascripts/data.js"></script>
     <script>
       //document.ready = function() {
       $(function() {
@@ -62,7 +25,7 @@ var data = {
 
           episodas = exports.episodas;
 	  console.log(episodas)
-          episodas(data);
+          episodas(exports.data);
       })
     </script>
     <style type="text/css">
