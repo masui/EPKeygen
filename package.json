@@ -1,5 +1,5 @@
 {
-   "name": "EPGen",
+   "name": "EPKeygen",
    "version": "1.0.0",
    "description": "Create id_rsa with EpisoPass",
    "main": "main.js",
