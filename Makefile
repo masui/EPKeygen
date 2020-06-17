@@ -18,7 +18,9 @@ install:
 	npm install
 
 run:
-	npm run start
+	npm start .
+#	npm run start
+
 
 # upload-mac:
 # 	scp build/GyazoUploader-1.0.0.dmg pitecan.com:/www/www.pitecan.com/
