@@ -85,4 +85,3 @@ crypt = function(seed, secret_string) {
 };
 
 exports.crypt = crypt;
-

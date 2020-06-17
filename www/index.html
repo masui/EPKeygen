@@ -11,21 +11,8 @@
     <script src="javascripts/episodas.js"></script>
     <script src="javascripts/data.js"></script>
     <script>
-      //document.ready = function() {
       $(function() {
-	  /*
-        const { ipcRenderer } = window.native; // preload.js 経由で渡されるデータ
-        $('#generate').on('click', ()=> {
-            ipcRenderer.send('md5', '123456')
-        })
-	  */
-
-	  //alert(exports.MD5_hexhash("abc"))
-	  //alert(exports.crypt('abc','def'))
-
-          episodas = exports.episodas;
-	  console.log(episodas)
-          episodas(exports.data);
+          exports.episodas(exports.data);
       })
     </script>
     <style type="text/css">
@@ -35,11 +22,7 @@
     </style>
   </head>
   <body background="exclusive_paper.gif">
-    <span id="generate">KeyGen</span>
-    
     <div id="das">
     </div>
-
-
   </body>
 </html>

@@ -42,99 +42,10 @@ episodas = function(data){
     };
 
     function finish(){ // DASパタン入力終了
-	$('#das').children().remove();
-
-	//if(typeof(editor) != 'undefined'){ // 編集画面のときだけHTMLデータ取得ボタン処理
-	//    lib.lib.make_html(data);
-	//}
-
-	/*
-	alert(exports.crypt('111','kkk'))
-	alert(data.seed)
-	alert(secretstr())
-	*/
-	
 	var newpass = exports.crypt(data.seed, secretstr());
 
         const { ipcRenderer } = window.native; // preload.js 経由で渡されるデータ
-        ipcRenderer.send('md5', newpass)
-	
-	/*
-	var center = $('<center>');
-	$('#das').append(center);
-	
-	alert(newpass)
-	
-	center.append($('<p>'));
-	
-	// 生成されたパスワードを表示
-	// 値をコピーできるようにするため<input>を利用
-	var passspan = $('<input>');
-	passspan.val(newpass);
-	passspan.attr('type','text');
-	passspan.attr('id','passspan');
-	passspan.css('font-size',width*0.06);
-	passspan.css('border-radius',width*0.015);
-	passspan.css('margin',width*0.01);
-	passspan.css('padding',width*0.02);
-	passspan.css('background-color','#fff');
-	passspan.css('border-style','solid');
-	passspan.css('border-width','1pt');
-	passspan.css('border-color','#000');
-	center.append(passspan);
-
-	center.append($('<p>'));
-	
-	var show = $('<input>');
-	show.attr('type','button');
-	show.attr('value','表示');
-	show.css('font-size',width*0.05);
-	show.css('border-radius',width*0.015);
-	show.css('margin',width*0.01);
-	show.css('padding',width*0.02);
-	show.css('background-color','#fff');
-	show.css('border-style','solid');
-	show.css('border-width','1pt');
-	show.css('border-color','#000');
-	show.click(function(event){
-	    passspan.show();
-	    show.hide();
-	    again.show();
-	});
-	center.append(show);
-
-	var again = $('<input>');
-	again.attr('type','button');
-	again.attr('value','再実行');
-	again.css('font-size',width*0.05);
-	again.css('border-radius',width*0.015);
-	again.css('margin',width*0.01);
-	again.css('padding',width*0.02);
-	again.css('background-color','#fff');
-	again.css('border-style','solid');
-	again.css('border-width','1pt');
-	again.css('border-color','#000');
-	again.click(function(event){
-            init();
-	});
-	center.append(again);
-
-	// 生成された文字列をコピー
-	passspan.select();
-	document.execCommand("copy");
-
-	if(typeof(editor) == 'undefined'){ // 利用画面
-	    passspan.hide()
-	    show.show()
-	    again.hide()
-	}
-	else { // DAS生成中の確認画面
-	    passspan.show()
-	    passspan.blur() // 文字列を非選択状態にする
-	    show.hide()
-	    again.show()
-	}
-	*/
+        ipcRenderer.send('secret', newpass)
     }
     
     secretstr = function() {
