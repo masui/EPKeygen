@@ -1,6 +1,6 @@
 .PHONY: build
 
-build: compile
+build: compile install
 	npm run build
 	cp -r build/mac/EPKeygen.app /Applications
 
