@@ -1,7 +1,7 @@
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
 //
-// IPCで必要になる「ipcRenderer」をここで定義
+// レンダラプロセスとの通信でで必要になる「ipcRenderer」をここで定義
 //
 
 window.addEventListener('DOMContentLoaded', () => {

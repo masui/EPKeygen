@@ -12,7 +12,7 @@ cleanbuild: clean install build
 clean:
 	-/bin/rm -r -f build
 	-/bin/rm -r -f node_modules
-	-/bin/rm *~
+	-/bin/rm *~ */*~
 
 install:
 	npm install

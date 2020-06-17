@@ -1,6 +1,6 @@
-/*
- * main.js
- */
+//
+// 秘密鍵をEpisoPassで生成する「EPKeygen」アプリ
+//
 
 'use strict';
 
@@ -22,19 +22,17 @@ function exist(path){
 function convert(from,to,secret){
     var md5val = md5(secret)
 
-    // 存在するファイルfromを暗号化してtoにする
+    // 存在するファイルfromをEpisoPassで暗号化してtoにする
     var indata = fs.readFileSync(from,'utf-8')
     var inlines = indata.split(/\n/)
     var outlines = []
     for(var i=0;i<inlines.length;i++){
 	var line = inlines[i]
-	//console.log(`in = ${line}`)
 	if(line.match(/\-\-\-\-/)){
 	    outlines.push(line)
 	}
 	else {
 	    outlines.push(crypt.crypt(line,md5val))
-	    //console.log(`out=${crypt.crypt(line,md5val)}`)
 	}
     }
     var out = outlines.join("\n")
@@ -70,7 +68,6 @@ app.on('ready', function() {
 	height: 700,
 	webPreferences: {
 	    preload: `${__dirname}/preload.js`
-	    //preload: path.join(__dirname, 'preload.js')
 	}
     });
 
@@ -84,11 +81,4 @@ app.on('ready', function() {
     
     // デベロッパーツールを表示
     // mainWindow.toggleDevTools();
-
-    // ウィンドウが閉じられたらアプリも終了
-    /*
-    mainWindow.on('closed', function() {
-	mainWindow = null;
-    });
-    */
 });
