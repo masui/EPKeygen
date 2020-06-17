@@ -4,11 +4,12 @@
    "description": "Create id_rsa with EpisoPass",
    "main": "main.js",
    "dependencies": {
+      "coffee-script": "^1.12.7",
       "md5": "^2.2.1"
    },
    "devDependencies": {
       "app": "^0.1.0",
-      "electron": "^8.2.5",
+      "electron": "^8.3.2",
       "electron-app": "^1.0.0",
       "electron-builder": "^22.6.0",
       "electron-packager": "^14.2.1",
