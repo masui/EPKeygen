@@ -2,9 +2,9 @@
 
 <ul>
   <li><a href="https://EpisoPass.com/">EpisoPass</a>で<code>~/.ssh/id_rsa</code>を管理する</li>
-  <li><code>~/.ssh/id_rsa</code>が存在する状況でEPKeygenを動かすと<code>~/.ssh/id_rsa_episopass</code>ができる</li>
+  <li><code>~/.ssh/id_rsa</code>が存在する状況でEPKeygenを動かすと<code>~/.ssh/id_rsa.episopass</code>ができる</li>
   <li><code>~/.ssh/id_rsa</code>を消してEPKeygenを動かすと<code>~/.ssh/id_rsa</code>が復活する</li>
-  <li>ふだんは<code>~/.ssh/id_rsa_episopass</code>だけパソコンに置いておけばいい</li>
+  <li>ふだんは<code>~/.ssh/id_rsa.episopass</code>だけパソコンに置いておけばいい</li>
   <li>必要なときだけ<code>~/.ssh/id_rsa</code>を作ればいい</li>
 </ul>
 
