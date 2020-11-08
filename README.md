@@ -14,5 +14,6 @@
   <li>レンダリングプロセスは暗号計算に必要な回答リストだけ返す
   <li>それを使って<code>main.js</code>がmd5を計算して<code>id_rsa</code>を生成する</li>
   <li>問題は<code>~/.ssh/qa.json</code>に書いておく</li>
+  <li><code>~/.netrc</code>なども同じように扱うか?</li>
 </ul>
 
